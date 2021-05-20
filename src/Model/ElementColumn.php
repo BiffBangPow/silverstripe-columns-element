@@ -13,6 +13,16 @@ class ElementColumn extends DataObject
     private static $table_name = 'BBP_ElementColumn';
 
     /**
+     * @var string
+     */
+    private static $singular_name = 'Column';
+
+    /**
+     * @var string
+     */
+    private static $plural_name = 'Columns';
+
+    /**
      * @var array
      */
     private static $db = [
