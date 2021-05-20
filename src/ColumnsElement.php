@@ -14,7 +14,7 @@ class ColumnsElement extends BaseElement
     /**
      * @var string
      */
-    private static $table_name = 'ElementColumns';
+    private static $table_name = 'BBP_ElementColumns';
 
     private static $singular_name = 'columns element';
 
