@@ -10,7 +10,7 @@ class ElementColumn extends DataObject
     /**
      * @var string
      */
-    private static $table_name = 'ElementColumn';
+    private static $table_name = 'BBP_ElementColumn';
 
     /**
      * @var array
