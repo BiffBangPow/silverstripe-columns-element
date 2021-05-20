@@ -1,7 +1,7 @@
 {
-  "name": "biffbangpow-elementmodule-template",
+  "name": "biffbangpow-columns-element",
   "version": "1.0.0",
-  "description": "Module skeleton for BBP elements",
+  "description": "Columns element",
   "scripts": {
     "build": "yarn && yarn lint && NODE_ENV=production webpack -p --bail --progress",
     "dev": "NODE_ENV=development webpack --progress",
