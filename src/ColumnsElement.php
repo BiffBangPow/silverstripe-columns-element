@@ -22,6 +22,8 @@ class ColumnsElement extends BaseElement
 
     private static $description = 'Displays the main focuses of your business';
 
+    private static $inline_editable = false;
+
     /**
      * @var array
      */
