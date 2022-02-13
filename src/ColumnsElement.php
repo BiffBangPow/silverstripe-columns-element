@@ -7,7 +7,8 @@ use DNADesign\Elemental\Models\BaseElement;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\GridField\GridField;
 use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
-use UndefinedOffset\SortableGridField\Forms\GridFieldSortableRows;
+use Symbiote\GridFieldExtensions\GridFieldOrderableRows;
+
 
 class ColumnsElement extends BaseElement
 {
@@ -42,11 +43,15 @@ class ColumnsElement extends BaseElement
     {
         $fields = parent::getCMSFields();
         $fields->removeByName(['Columns']);
-        $conf = GridFieldConfig_RecordEditor::create(10);
-        $conf->addComponent(new GridFieldSortableRows('Sort'));
         $fields->addFieldToTab(
             'Root.Main',
-            GridField::create('Columns', 'Columns', $this->Columns(), $conf)
+            GridField::create(
+                'Columns',
+                _t(__CLASS__ . '.Columns', 'Columns'),
+                $this->Columns(),
+                GridFieldConfig_RecordEditor::create()
+                    ->addComponent(new GridFieldOrderableRows('Sort'))
+            )
         );
 
         return $fields;

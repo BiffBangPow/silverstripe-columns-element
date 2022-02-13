@@ -9,7 +9,7 @@
         </div>
         <div class="row">
             <% loop $Columns %>
-                <div class="col-12 col-lg-4">
+                <div class="$ColumnClass">
                     <h4 class="mb-4">$Name</h4>
                     <div>$Description</div>
                     <% if $CTAType != 'None' %>

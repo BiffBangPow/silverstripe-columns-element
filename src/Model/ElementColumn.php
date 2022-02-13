@@ -101,11 +101,15 @@ class ElementColumn extends DataObject
         return $fields;
     }
 
+    /**
+     * Get the classes for the column
+     * @return string
+     */
     public function getColumnClass()
     {
-        $class = ($this->ColumnWidthSmall != "") ? $this->ColumnWidthSmall : 'col-12';
-        $class .= " " . ($this->ColumnWidthLarge != "") ? $this->ColumnWidthLarge : 'col-lg-4';
+        $classes[] = ($this->ColumnWidthSmall != "") ? $this->ColumnWidthSmall : 'col-12';
+        $classes[] = ($this->ColumnWidthLarge != "") ? $this->ColumnWidthLarge : 'col-lg-4';
 
-        return $class;
+        return implode(" ", $classes);
     }
 }
