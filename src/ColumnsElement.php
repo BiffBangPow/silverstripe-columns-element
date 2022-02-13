@@ -15,12 +15,9 @@ class ColumnsElement extends BaseElement
      * @var string
      */
     private static $table_name = 'BBP_ElementColumns';
-
     private static $singular_name = 'columns element';
-
     private static $plural_name = 'columns elements';
-
-    private static $description = 'Displays the main focuses of your business';
+    private static $description = 'Displays content in columns';
 
     private static $inline_editable = false;
 
@@ -44,11 +41,11 @@ class ColumnsElement extends BaseElement
     public function getCMSFields()
     {
         $fields = parent::getCMSFields();
-
+        $fields->removeByName(['Columns']);
         $conf = GridFieldConfig_RecordEditor::create(10);
         $conf->addComponent(new GridFieldSortableRows('Sort'));
         $fields->addFieldToTab(
-            'Root.Columns',
+            'Root.Main',
             GridField::create('Columns', 'Columns', $this->Columns(), $conf)
         );
 
