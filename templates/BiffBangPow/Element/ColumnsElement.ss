@@ -27,6 +27,20 @@
                 </div>
             <% end_loop %>
         </div>
+        <% if $CTAType != 'None' %>
+            <div class="row">
+                <div class="cta">
+                    <p>
+                        <a href="$CTALink" class="cta-link"
+                            <% if $CTAType == 'External' %>target="_blank" rel="noopener"
+                            <% else_if $CTAType == 'Download' %>download
+                            <% end_if %>>
+                            $LinkText
+                        </a>
+                    </p>
+                </div>
+            </div>
+        <% end_if %>
     </div>
 </div>
 

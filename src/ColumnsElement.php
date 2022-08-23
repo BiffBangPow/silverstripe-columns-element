@@ -3,6 +3,7 @@
 namespace BiffBangPow\Element;
 
 use BiffBangPow\Element\Model\ElementColumn;
+use BiffBangPow\Extension\CallToActionExtension;
 use DNADesign\Elemental\Models\BaseElement;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\GridField\GridField;
@@ -34,6 +35,10 @@ class ColumnsElement extends BaseElement
      */
     private static $owns = [
         'Columns',
+    ];
+
+    private static $extensions = [
+        CallToActionExtension::class
     ];
 
     /**
