@@ -37,6 +37,10 @@ class ColumnsElement extends BaseElement
         'Columns',
     ];
 
+    private static $cascade_deletes = [
+        'Columns'
+    ];
+
     private static $extensions = [
         CallToActionExtension::class
     ];
