@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-12">
             <% if $ShowTitle %>
-                <h3 class="mb-5">$MarkdownText.Title.RAW</h3>
+                <h3 class="mb-5">$Title</h3>
             <% end_if %>
         </div>
     </div>
