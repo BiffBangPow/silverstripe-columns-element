@@ -76,6 +76,6 @@ class ColumnsElement extends BaseElement
 
     public function getSimpleClassName()
     {
-        return 'columns-element';
+        return 'bbp-columns-element';
     }
 }
