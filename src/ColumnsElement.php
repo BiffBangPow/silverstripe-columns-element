@@ -2,6 +2,7 @@
 
 namespace BiffBangPow\Element;
 
+use BiffBangPow\Element\Control\ColumnsElementController;
 use BiffBangPow\Element\Model\ElementColumn;
 use BiffBangPow\Extension\CallToActionExtension;
 use DNADesign\Elemental\Models\BaseElement;
@@ -22,6 +23,8 @@ class ColumnsElement extends BaseElement
     private static $description = 'Displays content in columns';
 
     private static $inline_editable = false;
+
+    private static $controller_class = ColumnsElementController::class;
 
     /**
      * @var array
