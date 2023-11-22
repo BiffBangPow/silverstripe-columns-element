@@ -9,7 +9,7 @@
     <div class="row justify-content-center">
         <% loop $Columns %>
             <div class="$ColumnClass">
-                <h3 class="mb-4">$Name</h3>
+                <h3 class="mb-4 column-title">$Name</h3>
                 <div>$Description</div>
                 <% if $CTAType != 'None' %>
                     <div class="column-cta my-4 text-center">
